@@ -25,12 +25,17 @@ export const postScore = async (name, s) => {
 };
 
 export const getScores = async () => {
-    const payload = {
-      method: 'Get',
-      mode: 'cors',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-    };
-  
+  const payload = {
+    method: 'Get',
+    mode: 'cors',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  };
+
+  const response = await fetch(url, payload);
+  const topScores = await response.json();
+
+  return topScores.result;
+};
