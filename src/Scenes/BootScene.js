@@ -19,3 +19,9 @@ export default class BootScene extends Phaser.Scene {
     this.loadAudio();
     this.loadTileMap();
   }
+
+  loadImages() {
+    this.load.image('logo', logoImg);
+    this.load.image('button1', button1Img);
+    this.load.image('background', backgroundImg);
+  }
