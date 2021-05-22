@@ -9,3 +9,13 @@ export const postScore = async (name, s) => {
       user: name,
       score: s,
     };
+
+  const payload = {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      Accept: 'Application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(userScore),
+  };
