@@ -1,31 +1,15 @@
 import Phaser from 'phaser';
 
-export default class Button extends Phaser.GameObjects.Container {
-  constructor(scene, x, y, key1, key2, text, targetScene) {
-    super(scene);
-    this.scene = scene;
-    this.x = x;
-    this.y = y;
+import logoImg from '../../assets/zenva_logo.png';
+import button1Img from '../../assets/images/ui/blue_button01.png';
+import itemsImg from '../../assets/images/items.png';
+import charactersImg from '../../assets/images/characters.png';
+import monstersImg from '../../assets/images/monsters.png';
+import backgroundImg from '../../assets/level/background-extruded.png';
 
-    this.button = this.scene.add.sprite(0, 0, key1).setInteractive();
-    this.text = this.scene.add.text(0, 0, text, { fontSize: '32px', fill: '#fff' });
-    Phaser.Display.Align.In.Center(this.text, this.button);
+const mapJSON = require('../../assets/level/large_level1.json');
 
-    this.add(this.button);
-    this.add(this.text);
-
-    this.button.on('pointerdown', () => {
-      this.scene.scene.start(targetScene);
-    });
-
-    this.button.on('pointerover', () => {
-      this.button.setTexture(key2);
-    });
-
-    this.button.on('pointerout', () => {
-      this.button.setTexture(key1);
-    });
-
-    this.scene.add.existing(this);
+export default class BootScene extends Phaser.Scene {
+  constructor() {
+    super('Boot');
   }
-}
