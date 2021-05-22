@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-
+// import mapJSON from '../../assets/level/large_level1.json';
 import logoImg from '../../assets/zenva_logo.png';
 import button1Img from '../../assets/images/ui/blue_button01.png';
 import itemsImg from '../../assets/images/items.png';
@@ -25,6 +25,20 @@ export default class BootScene extends Phaser.Scene {
     this.load.image('logo', logoImg);
     this.load.image('button1', button1Img);
     this.load.image('background', backgroundImg);
+  }
+
+  loadSpriteSheets() {
+    this.load.spritesheet('items', itemsImg, { frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('characters', charactersImg, { frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('monsters', monstersImg, { frameWidth: 32, frameHeight: 32 });
+  }
+
+  loadAudio() {
+    this.load.audio('goldSound', ['assets/audio/Pickup.wav']);
+    this.load.audio('enemyDeath', ['assets/audio/EnemyDeath.wav']);
+    this.load.audio('playerAttack', ['assets/audio/PlayerAttack.wav']);
+    this.load.audio('playerDamage', ['assets/audio/PlayerDamage.wav']);
+    this.load.audio('playerDeath', ['assets/audio/PlayerDeath.wav']);
   }
 
   loadTileMap() {
