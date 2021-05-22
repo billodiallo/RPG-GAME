@@ -13,6 +13,7 @@ export default class BootScene extends Phaser.Scene {
   constructor() {
     super('Boot');
   }
+
   preload() {
     this.loadImages();
     this.loadSpriteSheets();
@@ -24,5 +25,13 @@ export default class BootScene extends Phaser.Scene {
     this.load.image('logo', logoImg);
     this.load.image('button1', button1Img);
     this.load.image('background', backgroundImg);
+  }
+
+  loadTileMap() {
+    this.load.tilemapTiledJSON('map', mapJSON);
+  }
+
+  create() {
+    this.scene.start('Preloader');
   }
 }
