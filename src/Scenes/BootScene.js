@@ -13,3 +13,9 @@ export default class BootScene extends Phaser.Scene {
   constructor() {
     super('Boot');
   }
+  preload() {
+    this.loadImages();
+    this.loadSpriteSheets();
+    this.loadAudio();
+    this.loadTileMap();
+  }
