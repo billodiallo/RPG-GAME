@@ -23,3 +23,14 @@ export const postScore = async (name, s) => {
   const data = await response.json();
   return data;
 };
+
+export const getScores = async () => {
+    const payload = {
+      method: 'Get',
+      mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    };
+  
