@@ -32,3 +32,27 @@ export default class Monster extends Phaser.Physics.Arcade.Image {
     this.healthBar.fillGradientStyle(0xff0000, 0xffffff, 4);
     this.healthBar.fillRect(this.x, this.y - 8, 64 * (this.health / this.maxHealth), 5);
   }
+
+  updateHealth(health) {
+    this.health = health;
+    this.updateHealthBar();
+  }
+
+  makeActive() {
+    this.setActive(true);
+    this.setVisible(true);
+    this.body.checkCollision.none = false;
+    this.updateHealthBar();
+  }
+
+  makeInactive() {
+    this.setActive(false);
+    this.setVisible(false);
+    this.body.checkCollision.none = true;
+    this.healthBar.clear();
+  }
+
+  update() {
+    this.updateHealthBar();
+  }
+}
