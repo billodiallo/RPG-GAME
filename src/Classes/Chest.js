@@ -12,5 +12,12 @@ export default class Chest extends Phaser.Physics.Arcade.Image {
 
     this.setScale(2);
   }
+  makeActive() {
+    this.setActive(true);
+    this.setVisible(true);
+    this.body.checkCollision.none = false;
+  }
+
+
 
   }
