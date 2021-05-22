@@ -1,4 +1,3 @@
-
 // import/no-extraneous-dependencies
 // import/no-extraneous-dependencies
 const merge = require('webpack-merge');
