@@ -38,8 +38,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.5",
+    "babel-eslint": "^10.1.0",
     "phaser": "^3.24.1",
     "regenerator-runtime": "^0.13.7",
     "uuid": "^8.3.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
