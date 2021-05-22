@@ -1,7 +1,8 @@
 {
   "name": "webpackk",
   "version": "1.0.0",
-  "description": "",
+  "description": " My JS Capstone built with Phaser",
+  "main": "src/index.js",
   "private": true,
   "scripts": {
     "test": "jest",
@@ -10,7 +11,7 @@
     "start": "webpack-dev-server --config webpack/base.js --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Billo Diallo",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
