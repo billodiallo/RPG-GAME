@@ -16,3 +16,14 @@ export default class GameManager {
       this.chestLocations = {};
       this.monsterLocations = {};
     }
+
+      init() {
+        this.model = this.sys.game.globals.model;
+      }
+
+    setup() {
+        this.parseMapData();
+        this.setupEventListener();
+        this.setupSpawners();
+        this.spawnPlayer();
+      }
