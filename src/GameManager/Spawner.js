@@ -56,4 +56,31 @@ export default class Spawner {
     this.objectsCreated.push(monster);
     this.addObject(monster.id, monster);
   }
+
+  pickRandomLocation() {
+    const location = this.spawnLocations[Math.floor(Math.random() * this.spawnLocations.length)];
+    const invalidLocation = this.objectsCreated.some((obj) => {
+      if (obj.x === location[0] && obj.y === location[1]) {
+        return true;
+      }
+      return false;
+    });
+
+    if (invalidLocation) return this.pickRandomLocation();
+    return location;
+  }
+
+  removeObject(id) {
+    this.objectsCreated = this.objectsCreated.filter(obj => obj.id !== id);
+    this.deleteObject(id);
+  }
+
+  moveMonsters() {
+    this.moveMonsterInterval = setInterval(() => {
+      this.objectsCreated.forEach((monster) => {
+        monster.move();
+      });
+      this.moveObjects();
+    }, 1000);
+  }
 }
