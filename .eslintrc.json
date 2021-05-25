@@ -4,14 +4,7 @@
     "es6": true,
     "jest": true
   },
-  "settings": {
-    "import/resolver": {
-        "node": {
-            "paths": ["src"],
-            "extensions": [".js", ".jsx", ".ts", ".tsx"]
-        }
-    }
-},
+  
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -24,6 +17,13 @@
     "eol-last": "off",
     "arrow-parens": "off"
   },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    },
   "ignorePatterns": [
     "dist/",
     "build/"
