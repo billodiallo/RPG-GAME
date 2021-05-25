@@ -23,7 +23,6 @@ In this particular game the action is mainly focused on collecting as many chest
 ## Built With
 
 - Javascript/ES6
-- Fetch Api
 - npm
 - Webpack
 - HTML/CSS
@@ -31,6 +30,7 @@ In this particular game the action is mainly focused on collecting as many chest
 - Stylelint
 - ESLint
 - Phaser3
+- Leaderboard API service for the scores' leaders board.
 
 
 ## Prerequisities
