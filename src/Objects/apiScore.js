@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 
-const apiKey = 'Zl4d7IVkemOTTVg2fUdz';
+// global variables
+const apiKey = 'CsrN0PsyhgU0XnTrMf5q ';
 const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${apiKey}/scores`;
 
 export const postScore = async (name, s) => {
@@ -8,7 +9,7 @@ export const postScore = async (name, s) => {
     user: name,
     score: s,
   };
-
+    // request options
   const payload = {
     method: 'POST',
     mode: 'cors',
@@ -19,6 +20,7 @@ export const postScore = async (name, s) => {
     body: JSON.stringify(userScore),
   };
 
+  // send POST request
   const response = await fetch(url, payload);
   const data = await response.json();
   return data;
