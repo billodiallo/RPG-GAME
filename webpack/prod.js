@@ -12,6 +12,25 @@ module.exports = merge(base, {
     maxEntrypointSize: 900000,
     maxAssetSize: 900000,
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: [/\.vert$/, /\.frag$/],
+        use: 'raw-loader',
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg|xml|wav)$/i,
+        use: 'file-loader',
+      },
+    ],
+  },
   optimization: {
     minimizer: [
       new TerserPlugin({
