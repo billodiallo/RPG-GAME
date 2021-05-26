@@ -1,25 +1,29 @@
 {
-  "name": "webpackk",
+  "name": "js-capstone-rpg",
   "version": "1.0.0",
-  "description": " My JS Capstone built with Phaser",
+  "description": "JS Capstone built with Phaser",
   "main": "src/index.js",
-  "private": true,
   "scripts": {
-    "test": "jest",
-    "watch": "webpack --watch",
     "build": "webpack --config webpack/prod.js ",
     "start": "webpack-dev-server --config webpack/base.js --open"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billodiallo/RPG-GAME.git"
+  },
   "author": "Billo Diallo",
-  "license": "ISC",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "bugs": {
+    "url": "https://github.com/billodiallo/RPG-GAME.git/issues"
+  },
+  "homepage": "https://https://github.com/billodiallo/RPG-GAME.git/README.md",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.3",
-    "es-module-loader": "^2.3.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
@@ -40,12 +44,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.5",
-    "babel-eslint": "^10.1.0",
     "phaser": "^3.24.1",
     "regenerator-runtime": "^0.13.7",
     "uuid": "^8.3.0"
-  },
-  "standard": {
-    "parser": "babel-eslint"
   }
 }
