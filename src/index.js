@@ -1,9 +1,7 @@
 import Phaser from 'phaser';
 import GameScene from './Scenes/GameScene';
 import BootScene from './Scenes/BootScene';
-/* eslint-disable */
 import PreloaderScene from './Scenes/PreloaderScene';
-/* eslint-disable */
 import UiScene from './Scenes/UiScene';
 import TitleScene from './Scenes/TitleScene';
 import OptionsScene from './Scenes/OptionsScene';
