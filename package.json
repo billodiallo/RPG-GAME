@@ -10,6 +10,10 @@
     "build": "webpack --config webpack/prod.js ",
     "start": "webpack-dev-server --config webpack/base.js --open"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billodiallo/RPG-GAME.git"
+  },
   "keywords": [],
   "author": "Billo Diallo",
   "license": "ISC",
