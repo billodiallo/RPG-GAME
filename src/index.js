@@ -1,7 +1,9 @@
 import Phaser from 'phaser';
 import GameScene from './Scenes/GameScene';
 import BootScene from './Scenes/BootScene';
-import PreloaderScene from './Scenes/PreloaderScene';  
+// eslint-disable-next-line import/no-unresolved
+// import/no-extraneous-dependencies
+import PreloaderScene from './Scenes/PreloaderScene';
 import UiScene from './Scenes/UiScene';
 import TitleScene from './Scenes/TitleScene';
 import OptionsScene from './Scenes/OptionsScene';
