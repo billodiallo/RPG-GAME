@@ -17,7 +17,8 @@ In this particular game the action is mainly focused on collecting as many chest
 
 
 
-[Live Demo Link](https://billodiallo.github.io/RPG-GAME/)
+[Live Demo Link](https://billodiallo.github.io/RPG-GAME/)</br>
+[Video Presentation Link](https://www.loom.com/share/9f980762adf84450bbb01d3b371581c0)
 
 
 ## Built With
