@@ -1,35 +1,55 @@
 {
-  "name": "webpackk",
+  "name": "js-capstone-rpg",
   "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "description": "JS Capstone built with Phaser",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "build": "webpack --config webpack/prod.js ",
+    "start": "webpack-dev-server --config webpack/base.js --open"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billodiallo/RPG-GAME.git"
+  },
+  "author": "Billo Diallo",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "bugs": {
+    "url": "https://github.com/billodiallo/RPG-GAME.git/issues"
+  },
+  "homepage": "https://https://github.com/billodiallo/RPG-GAME.git/README.md",
   "devDependencies": {
-    "@babel/preset-env": "^7.14.1",
-    "babel-eslint": "^10.1.0",
-    "css-loader": "^5.2.4",
-    "eslint": "^7.25.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "jest": "^26.6.3",
-    "style-loader": "^2.0.0",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.19.0",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.23.3",
+    "file-loader": "^4.3.0",
+    "jest": "^27.0.1",
+    "json-loader": "^0.5.7",
+    "json5-loader": "^4.0.0",
+    "raw-loader": "^3.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.18.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@babel/runtime": "^7.14.0",
+    "babel-eslint": "^10.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "terser-webpack-plugin": "^2.3.7",
+    "phaser": "^3.24.1",
+    "webpack-merge": "^4.2.2",
+    "webpack": "^4.46.0",
+    "regenerator-runtime": "^0.13.7",
+    "uuid": "^8.3.0"
   }
 }
