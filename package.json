@@ -4,6 +4,7 @@
   "description": "JS Capstone built with Phaser",
   "main": "src/index.js",
   "scripts": {
+    "test": "jest",
     "build": "webpack --config webpack/prod.js ",
     "start": "webpack-dev-server --config webpack/base.js --open"
   },
